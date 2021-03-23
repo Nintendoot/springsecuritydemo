@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html>
+<body>
+<header th:insert="_head.html"></header>
+<div class="container">
+    <form th:action="@{/history}" th:method="get">
+        <h2>История</h2>
+        <h1 th:text="${userLogin}"></h1><br>
+        <tr th:each="us : ${usersHistory}">
+            <td th:text="${us}">User</td><br>
+        </tr><br>
+
+    </form>
+</div>
+</body>
+</html>
